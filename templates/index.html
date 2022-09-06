@@ -1,0 +1,102 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>textUTILS</title>
+    </head>
+    <body>
+        <div  style="width:100%; height: auto;">
+            <h2 class = "primary">
+                Welcome to the text analyzer. Enter Your Text Below
+            </h2>
+            <form action="/analyze" method="get">
+                <textarea name="text" style="width: 528px; height: 145px;"></textarea><br>
+                <input type="checkbox" name="remove">Remove text from textarea<br>
+                <input type="checkbox" name="uppercase">UPPERCASE<br>
+                <input type="checkbox" name="newlineremover">New Line Remover<br>
+                <input type="checkbox" name="extra_space_remover">Space Remover<br>
+                <input type="checkbox" name="charcount">charector counter<br>
+                <button type="submit">Analyze TEXT</button>
+            </form>
+            
+        </div>
+    </body>
+    <!-- JavaScript Bundle with Popper -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</html> --> 
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TEXT UTIS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">TEXTUTITS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Contact Us</a> 
+              </li>
+            </ul>
+<form  action="/analyze" method='post' class="d-flex" role="search"> {% csrf_token %} 
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+            
+          </div>
+        </div>
+      </nav>
+
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Welcome to the text analyzer. 
+        </strong> Happy Text.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+      <div class="container">
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Enter Your Text Below</label>
+            <textarea  name = 'text' class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+        </div>
+        <div class="form-check form-switch">
+            <input name="remove" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Remove text from textarea</label>
+        </div>
+        <div class="form-check form-switch">
+            <input name="uppercase" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">UPPERCASE</label>
+        </div>
+        <div class="form-check form-switch">
+            <input name="newlineremover" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">New Line Remover</label>
+        </div>
+        <div class="form-check form-switch">
+            <input name="extra_space_remover" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Space Remover</label>
+        </div>
+        <div class="form-check form-switch">
+            <input name="charcount" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">charector counter</label>
+        </div>
+        <button type="submit" class="btn btn-dark mt-2">Analyze TEXT</button>
+
+                
+    </form>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
